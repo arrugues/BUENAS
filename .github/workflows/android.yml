@@ -26,6 +26,7 @@ jobs:
 
     - name: Build with Buildozer
       run: |
+        set +o pipefail
         yes | buildozer -v android debug
 
     - name: Upload APK Artifact
